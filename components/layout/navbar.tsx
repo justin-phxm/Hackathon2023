@@ -15,14 +15,17 @@ export default function NavBar({ session }: { session: Session | null }) {
     <>
       <SignInModal />
       <div
-        className={`fixed top-0 w-full flex justify-center ${
+        className={`fixed top-0 flex w-full justify-center ${
           scrolled
             ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
             : "bg-white/0"
         } z-30 transition-all`}
       >
-        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
-          <Link href="/" className="flex items-center font-display text-2xl">
+        <div className="mx-5 flex h-16 w-full max-w-screen-xl items-center justify-between">
+          <Link
+            href="/myItems"
+            className="flex items-center font-display text-2xl"
+          >
             <Image
               src="/logo.png"
               alt="Precedent logo"
@@ -30,8 +33,30 @@ export default function NavBar({ session }: { session: Session | null }) {
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Precedent</p>
+            <p>ToolShed</p>
           </Link>
+          <input
+            type="text"
+            placeholder="Search"
+            className="mx-4 flex h-14 shrink grow basis-0 items-center justify-start gap-2 rounded-lg bg-neutral-100 p-2"
+          />
+          <div className="mx-4 flex items-start justify-start gap-[52px]">
+            <Link href="/" className=" text-base font-normal text-black">
+              Home
+            </Link>
+            <Link
+              href="/myItems"
+              className=" text-base font-normal text-black opacity-30"
+            >
+              My Items
+            </Link>
+            <Link
+              href="/"
+              className=" text-base font-normal text-black opacity-30"
+            >
+              My Requests
+            </Link>
+          </div>
           <div>
             {session ? (
               <UserDropdown session={session} />
