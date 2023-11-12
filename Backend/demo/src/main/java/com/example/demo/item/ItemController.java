@@ -29,10 +29,10 @@ public class ItemController {
         itemService.deleteItem(itemId);
     }
 
-    // @PutMapping(path = "{itemId}")
-    // public void updateItem(
-    //         @PathVariable("itemId") Long itemId,
-    //         @RequestBody Item itemDetails) {
-    //     itemService.updateItem(itemId, itemDetails);
-    // }
+    @PutMapping(path = "{itemId}")
+    public void updateItem(
+             @PathVariable("itemId") Long itemId,
+             @RequestBody Item itemDetails) {
+         itemService.updateItem(itemId, itemDetails);
+    }
 }
