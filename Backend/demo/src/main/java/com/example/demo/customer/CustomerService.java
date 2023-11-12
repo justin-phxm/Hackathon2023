@@ -20,6 +20,11 @@ public class CustomerService {
         return userRepository.findAll();
     }
 
+    public Customer getUser(Long userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalStateException("user with id " + userId + " does not exists"));
+    }
+
     public void addNewUser(Customer user) {
         Optional<Customer> userOptional = userRepository.findUserByEmail(user.getEmail());
 

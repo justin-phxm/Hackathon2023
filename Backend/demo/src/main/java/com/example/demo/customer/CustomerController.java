@@ -18,6 +18,11 @@ public class CustomerController {
         return userService.getUsers();
     }
 
+    @GetMapping(path = "{userId}")
+    public Customer getUser(@PathVariable("userId") Long userId) {
+        return userService.getUser(userId);
+    }
+
     @PostMapping
     public void registerNewUser(@RequestBody Customer user) {
         userService.addNewUser(user);
