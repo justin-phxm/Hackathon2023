@@ -23,7 +23,7 @@ export default function NavBar({ session }: { session: Session | null }) {
       >
         <div className="mx-5 flex h-16 w-full max-w-screen-xl items-center justify-between">
           <Link
-            href="/myItems"
+            href="/"
             className="flex items-center font-display text-2xl"
           >
             <Image
@@ -51,7 +51,7 @@ export default function NavBar({ session }: { session: Session | null }) {
               My Items
             </Link>
             <Link
-              href="/"
+              href="/myRequests"
               className=" text-base font-normal text-black opacity-30"
             >
               My Requests

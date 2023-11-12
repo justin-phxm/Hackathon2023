@@ -1,62 +1,99 @@
+"use client";
 import React from "react";
-
+import fakeUsers from "../../lib/fakeData/fakeUsers";
+// import MyButton from "./myButton";
 export default function myItems() {
+  const handleClick = () => {
+    console.log(fakeUsers[0]);
+  };
+
   return (
     <>
       <div className="z-10 w-full max-w-xl">
-      <div className="w-full h-full justify-start items-start gap-12 inline-flex">
-  <div className="grow shrink basis-0 flex-col justify-start items-start gap-10 inline-flex">
-    <div className="self-stretch text-black text-2xl font-black font-['Nunito Sans'] leading-normal">Borrowed Items</div>
-    <div className="self-stretch flex-col justify-start items-start gap-10 flex">
-      <div className="self-stretch py-4 justify-start items-center gap-[15px] inline-flex">
-        <div className="w-[90px] h-[90px] justify-center items-center flex">
-          <img className="w-[90px] h-[90px]" src="https://via.placeholder.com/90x90" />
-        </div>
-        <div className="grow shrink basis-0 h-14 justify-start items-center flex">
-          <div className="grow shrink basis-0 flex-col justify-start items-start gap-2 inline-flex">
-            <div className="self-stretch text-black text-base font-normal font-['Actor'] leading-normal">Hammer</div>
-            <div className="self-stretch text-black text-sm font-normal font-['Actor'] leading-normal">Return by: November 26, 2023 </div>
+        <div className="inline-flex h-full w-full items-start justify-start gap-12">
+          <button onClick={handleClick}>Click here </button>
+          <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-10">
+            <div className="font-['Nunito Sans'] self-stretch text-2xl font-black leading-normal text-black">
+              Borrowed Items
+            </div>
+            <div className="flex flex-col items-start justify-start gap-10 self-stretch">
+              <div className="inline-flex items-center justify-start gap-[15px] self-stretch py-4">
+                <div className="flex h-[90px] w-[90px] items-center justify-center">
+                  <img
+                    className="h-[90px] w-[90px]"
+                    src="https://via.placeholder.com/90x90"
+                  />
+                </div>
+                <div className="flex h-14 shrink grow basis-0 items-center justify-start">
+                  <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2">
+                    <div className="self-stretch font-['Actor'] text-base font-normal leading-normal text-black">
+                      Hammer
+                    </div>
+                    <div className="self-stretch font-['Actor'] text-sm font-normal leading-normal text-black">
+                      Return by: November 26, 2023{" "}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-end gap-6">
+                    <div className="font-['Actor'] text-xl font-normal leading-loose tracking-wide text-black">
+                      John Smith
+                    </div>
+                    <div className="relative h-8 w-8" />
+                  </div>
+                </div>
+              </div>
+              <div className="h-[0px] self-stretch border border-neutral-400"></div>
+              <div className="inline-flex items-center justify-start gap-[15px] self-stretch py-4">
+                <div className="flex h-[90px] w-[90px] items-center justify-center">
+                  <img
+                    className="h-[90px] w-[90px]"
+                    src="https://via.placeholder.com/90x90"
+                  />
+                </div>
+                <div className="flex h-14 shrink grow basis-0 items-center justify-start">
+                  <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2">
+                    <div className="self-stretch font-['Actor'] text-base font-normal leading-normal text-black">
+                      LawnMower
+                    </div>
+                    <div className="self-stretch font-['Actor'] text-sm font-normal leading-normal text-black">
+                      Return by: November 27, 2023
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-end gap-6">
+                    <div className="font-['Actor'] text-xl font-normal leading-loose tracking-wide text-black">
+                      Julia Roberts
+                    </div>
+                    <div className="relative h-8 w-8" />
+                  </div>
+                </div>
+              </div>
+              <div className="h-[0px] self-stretch border border-neutral-400"></div>
+              <div className="inline-flex items-center justify-start gap-[15px] self-stretch py-4">
+                <div className="flex h-[90px] w-[90px] items-center justify-center">
+                  <img
+                    className="h-[90px] w-[90px]"
+                    src="https://via.placeholder.com/90x90"
+                  />
+                </div>
+                <div className="flex h-14 shrink grow basis-0 items-center justify-start">
+                  <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2">
+                    <div className="self-stretch font-['Actor'] text-base font-normal leading-normal text-black">
+                      BaseBall Bat
+                    </div>
+                    <div className="self-stretch font-['Actor'] text-sm font-normal leading-normal text-black">
+                      Return by: November 27, 2023
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-end gap-6">
+                    <div className="font-['Actor'] text-xl font-normal leading-loose tracking-wide text-black">
+                      Nelson Dang
+                    </div>
+                    <div className="relative h-8 w-8" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="justify-end items-center gap-6 flex">
-            <div className="text-black text-xl font-normal font-['Actor'] leading-loose tracking-wide">John Smith</div>
-            <div className="w-8 h-8 relative" />
-          </div>
         </div>
-      </div>
-      <div className="self-stretch py-4 justify-start items-center gap-[15px] inline-flex">
-        <div className="w-[90px] h-[90px] justify-center items-center flex">
-          <img className="w-[90px] h-[90px]" src="https://via.placeholder.com/90x90" />
-        </div>
-        <div className="grow shrink basis-0 h-14 justify-start items-center flex">
-          <div className="grow shrink basis-0 flex-col justify-start items-start gap-2 inline-flex">
-            <div className="self-stretch text-black text-base font-normal font-['Actor'] leading-normal">LawnMower</div>
-            <div className="self-stretch text-black text-sm font-normal font-['Actor'] leading-normal">Return by: November 27, 2023</div>
-          </div>
-          <div className="justify-end items-center gap-6 flex">
-            <div className="text-black text-xl font-normal font-['Actor'] leading-loose tracking-wide">Julia Roberts</div>
-            <div className="w-8 h-8 relative" />
-          </div>
-        </div>
-      </div>
-      <div className="self-stretch h-[0px] border border-neutral-400"></div>
-      <div className="self-stretch py-4 justify-start items-center gap-[15px] inline-flex">
-        <div className="w-[90px] h-[90px] justify-center items-center flex">
-          <img className="w-[90px] h-[90px]" src="https://via.placeholder.com/90x90" />
-        </div>
-        <div className="grow shrink basis-0 h-14 justify-start items-center flex">
-          <div className="grow shrink basis-0 flex-col justify-start items-start gap-2 inline-flex">
-            <div className="self-stretch text-black text-base font-normal font-['Actor'] leading-normal">BaseBall Bat</div>
-            <div className="self-stretch text-black text-sm font-normal font-['Actor'] leading-normal">Return by: November 27, 2023</div>
-          </div>
-          <div className="justify-end items-center gap-6 flex">
-            <div className="text-black text-xl font-normal font-['Actor'] leading-loose tracking-wide">Nelson Dang</div>
-            <div className="w-8 h-8 relative" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
       </div>
       ;
     </>
