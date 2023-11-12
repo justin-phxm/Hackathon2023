@@ -6,7 +6,7 @@ export default interface userInterface{
     location: string;
     phoneNumber: string;
     creditCard: string;
-    lentItems: itemInterface[];
-    borrowedItems: itemInterface[];
-    requestedItems?: itemInterface[];
+    lentItems: string[];
+    borrowedItems: string[];
+    requestedItems: string[];
 }

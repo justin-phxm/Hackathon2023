@@ -8,9 +8,9 @@ const fakeUsers: userI[] = [
         location: "Calgary",
         phoneNumber: "1234567890",
         creditCard: "1234567890123456",
-        lentItems: [fakeItems[0], fakeItems[1], fakeItems[2]],
-        borrowedItems: [fakeItems[2], fakeItems[0], fakeItems[1]],
-        requestedItems: [fakeItems[0], fakeItems[1]],
+        lentItems: [fakeItems[0].itemID, fakeItems[1].itemID, fakeItems[2].itemID],
+        borrowedItems: [fakeItems[2].itemID],
+        requestedItems: [fakeItems[0].itemID],
     },
     {
         firstName: "Jane",
@@ -19,9 +19,9 @@ const fakeUsers: userI[] = [
         location: "Edmonton",
         phoneNumber: "0987654321",
         creditCard: "6543210987654321",
-        lentItems: [fakeItems[0], fakeItems[2]],
-        borrowedItems: [fakeItems[1]],
-        requestedItems: [fakeItems[2]],
+        lentItems: [fakeItems[0].itemID, fakeItems[2].itemID],
+        borrowedItems: [fakeItems[1].itemID],
+        requestedItems: [fakeItems[2].itemID],
     },
     {
         firstName: "Joe",
@@ -30,9 +30,9 @@ const fakeUsers: userI[] = [
         location: "Edmonton",
         phoneNumber: "0987654321",
         creditCard: "6543210987654321",
-        lentItems: [fakeItems[2]],
-        borrowedItems: [fakeItems[0]],
-        requestedItems: [fakeItems[1]],
+        lentItems: [fakeItems[2].itemID],
+        borrowedItems: [fakeItems[0].itemID],
+        requestedItems: [fakeItems[1].itemID],
     }
 ];
 

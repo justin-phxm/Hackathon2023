@@ -1,17 +1,14 @@
-import transactionInterface from './transactionI';
 export default interface itemInterface {
     itemName: string;
-    useruid: string;
+    owneruid: string;
     tags?: string[];
     condition: string;
     description?: string;
     imageIDs?: string[];
     rentalState: string;
-    transactionHistory?: transactionInterface[];
-    rentalPeriod: number;
     itemID: string;
-    ownerFirstName: string;
-    ownerLastName: string;
-    borrowerFirstName?: string;
-    borrowerLastName?: string
+    returnDate?: Date;
+    uidBorrower?: string;
+    lenderConfirm: boolean;
+    borrowerConfirm: boolean;   
 }
