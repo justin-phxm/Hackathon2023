@@ -41,20 +41,26 @@ export default function NavBar({ session }: { session: Session | null }) {
             className="mx-4 flex h-14 shrink grow basis-0 items-center justify-start gap-2 rounded-lg bg-neutral-100 p-2"
           />
           <div className="mx-4 flex items-start justify-start gap-[52px]">
-            <Link href="/" className=" text-base font-normal text-black">
+            <Link href="/" className="hover:underline text-base font-normal text-black">
               Home
             </Link>
             <Link
-              href="/myItems"
-              className=" text-base font-normal text-black opacity-30"
+              href="/myBorrowed"
+              className="hover:underline text-base font-normal text-black opacity-30"
             >
-              My Items
+              Borrowed Items
+            </Link>
+            <Link
+              href="/myLent"
+              className="hover:underline text-base font-normal text-black opacity-30"
+            >
+              Lent Items
             </Link>
             <Link
               href="/myRequests"
-              className=" text-base font-normal text-black opacity-30"
+              className="hover:underline text-base font-normal text-black opacity-30"
             >
-              My Requests
+              Requested Items
             </Link>
           </div>
           <div>

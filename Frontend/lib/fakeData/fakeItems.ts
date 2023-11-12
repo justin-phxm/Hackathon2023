@@ -2,7 +2,7 @@ import itemInterface from '../interfaces/itemI';
 import fakeTransactions from './fakeTransactions';
 const fakeItems: itemInterface[] = [
     {
-        name: "Lawnmower",
+        itemName: "Lawnmower",
         useruid: "123456abcdef",
         tags: ["lawnmower", "lawn", "mower", "lawn mower"],
         condition: "good",
@@ -12,9 +12,11 @@ const fakeItems: itemInterface[] = [
         transactionHistory: fakeTransactions,
         rentalPeriod: 7,
         itemID: "123456abcdef",
+        ownerFirstName: "Joe",
+        ownerLastName: "Shmoe",
     },
     {
-        name: "Hammer",
+        itemName: "Hammer",
         useruid: "fedcba654321",
         tags: ["hammer", "bludgeon", "nail"],
         condition: "average",
@@ -24,9 +26,11 @@ const fakeItems: itemInterface[] = [
         transactionHistory: fakeTransactions,
         rentalPeriod: 7,
         itemID: "123456abcdef",
+        ownerFirstName: "Jane",
+        ownerLastName: "Doe",
     },
     {
-        name: "Lawnmower",
+        itemName: "Lawnmower",
         useruid: "123456abcdef",
         tags: ["lawnmower", "lawn", "mower", "lawn mower"],
         condition: "good",
@@ -36,6 +40,10 @@ const fakeItems: itemInterface[] = [
         transactionHistory: fakeTransactions,
         rentalPeriod: 7,
         itemID: "123456abcdef",
+        ownerFirstName: "John",
+        ownerLastName: "Smith",
+        borrowerFirstName: "Joe",
+        borrowerLastName: "Shmoe",
     },
 ]
 

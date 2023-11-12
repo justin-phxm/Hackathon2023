@@ -8,4 +8,5 @@ export default interface userInterface{
     creditCard: string;
     lentItems: itemInterface[];
     borrowedItems: itemInterface[];
+    requestedItems?: itemInterface[];
 }
