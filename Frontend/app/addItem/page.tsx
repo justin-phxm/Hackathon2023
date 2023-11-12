@@ -3,7 +3,8 @@ import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
 import itemInterface from "@/lib/interfaces/itemI";
 import { v4 as uuidv4 } from "uuid";
-
+import { CldUploadWidget } from "next-cloudinary";
+import { Cloudinary } from "cloudinary-core";
 export default function addItem() {
   const defaultData: itemInterface = {
     itemName: "",
@@ -31,36 +32,27 @@ export default function addItem() {
     });
   };
 
-  //   useEffect(()=>{
-  //     const uploadImage = async (image: File) => {
-  //       try{
-  //         const formData = new FormData();
-  //         formData.append('file', image);
-  //         formData.append('upload_preset', 'ml_default');
-  //         formData.append('cloud_name', 'dyl4k60jw');
-  //         const res = await fetch('https://api.cloudinary.com/v1_1/dyl4k60jw/image/upload', {
-  //           method: 'POST',
-  //           body: formData
-  //         })
-  //         const file = await res.json();
-  //         setFormData(...formData, imageIDs: file.secure_url);
-  //         console.log(file);
-  //       }
-  //       catch(err){
-  //         console.log(err);
-  //       }
-  //   }
-  //   uploadImage(images);
-  // }, [images])
-
-  // const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   if (e.target.files) {
-  //     setFormData({
-  //       ...formData,
-  //       imagesIDs: [...e.target.files],
-  //     });
-  //   }
-  // };
+  const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+    try {
+      if (e.target.files && e.target.files[0]) {
+        const formData = new FormData();
+        formData.append("file", e.target.files[0]);
+        formData.append("upload_preset", "tkmk3obs"); // Replace with your Cloudinary upload preset
+        const res = await fetch(
+          "https://api.cloudinary.com/v1_1/dokvvbgkp/image/upload",
+          {
+            method: "POST",
+            body: formData,
+          },
+        );
+        const file = await res.json();
+        setImages(file);
+        console.log(file.secure_url);
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -81,14 +73,12 @@ export default function addItem() {
               </div>
             </div>
             <form onSubmit={handleSubmit}>
-              <label>
-                <input
-                  type="file"
-                  value={formData.imageIDs && (formData.imageIDs.toString())}
-                  name="imageIDs"
-                  // onChange={handleImageChange}
-                />
-              </label>
+              <input
+                type="file"
+                value={formData.imageIDs && formData.imageIDs.toString()}
+                name="imageIDs"
+                onChange={handleImageUpload}
+              />
               <Image
                 width={526}
                 height={360}
@@ -120,7 +110,9 @@ export default function addItem() {
                     type="date"
                     placeholder="Lending days"
                     name="returnDate"
-                    value={formData.returnDate && (formData.returnDate.toString())}
+                    value={
+                      formData.returnDate && formData.returnDate.toString()
+                    }
                     onChange={handleChange}
                   />
                   <input
