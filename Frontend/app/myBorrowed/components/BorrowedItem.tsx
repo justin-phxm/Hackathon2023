@@ -64,7 +64,7 @@ export default function BorrowedItem({ item }: BorrowedItemProps) {
       :
       <div>
         <p className="">
-          You haven't borrowed any items yet!
+          You have not borrowed any items yet!
         </p>
         <button className="rounded-lg bg-black p-2 text-white">
             <Link href="/">

@@ -62,6 +62,12 @@ export default function NavBar({ session }: { session: Session | null }) {
             >
               Requested Items
             </Link>
+            <Link
+              href="/addItem"
+              className="hover:underline text-base font-normal text-black opacity-30"
+            >
+              Post Item
+            </Link>
           </div>
           <div>
             {session ? (

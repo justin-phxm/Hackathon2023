@@ -66,7 +66,7 @@ export default function RequestedItem({ item }: Props) {
     </div>):
     <div>
       <p className="">
-      You haven't requested any items!
+      You have not requested any items!
 
       </p>
       <button className="rounded-lg bg-black p-2 text-white">
